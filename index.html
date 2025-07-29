@@ -43,27 +43,10 @@
   <!-- 効果音 -->
   <audio id="effect" src="sound.mp3"></audio>
 
-  <!-- BGM -->
-  <audio id="bgm" src="bgm.mp3" loop></audio>
-
   <script>
     const playArea = document.getElementById('play-area');
     const effect = document.getElementById('effect');
-    const bgm = document.getElementById('bgm');
 
-    let bgmStarted = false;
-
-    playArea.addEventListener('click', () => {
-      effect.play();
-
-      // BGMがまだ始まっていなければ再生開始
-      if (!bgmStarted) {
-        bgm.play();
-        bgmStarted = true;
-      }
-    });
-  </script>
-</body>
-</html>
+    playArea.addEventListener('clic
 
 
