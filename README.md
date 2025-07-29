@@ -1,1 +1,0 @@
-# komoda-gijutubu
