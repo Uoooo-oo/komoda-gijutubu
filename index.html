@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>タッチで音声再生</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f8ff;
+      font-family: sans-serif;
+    }
+    #play-area {
+      background: #4CAF50;
+      color: white;
+      padding: 40px 60px;
+      font-size: 24px;
+      border-radius: 20px;
+      cursor: pointer;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+
+<div id="play-area">タップして再生</div>
+
+
+<!-- 音声ファイル -->
+<audio id="my-audio" src="sound.mp3"></audio>
+
+
+<script>
+  const playArea = document.getElementById('play-area');
+  const audio = document.getElementById('my-audio');
+
+
+  playArea.addEventListener('click', () => {
+    audio.currentTime = 0; // 毎回先頭から再生
+    audio.play();
+  });
+</script>
+
+
+</body>
+</html>
