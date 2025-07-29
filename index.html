@@ -43,17 +43,26 @@
 
 
 <!-- 音声ファイル -->
-<audio id="my-audio" src="sound.mp3"></audio>
+<audio id="effect" src="sound.mp3"></audio>
+
+<audio id="bgm" src="bgm.mp3"></audio>
 
 
 <script>
   const playArea = document.getElementById('play-area');
-  const audio = document.getElementById('my-audio');
+  const effect = document.getElementById('effect');
+  const bgm = document.getElementById('bgm');
+
+  let bgmStarted = false;
 
 
   playArea.addEventListener('click', () => {
-    audio.currentTime = 0; // 毎回先頭から再生
-    audio.play();
+    effect.currentTime = 0; // 毎回先頭から再生
+    effect.play();
+
+    if(!bgmStarted) {
+      bgm.play();
+      bgmStarted =true;
   });
 </script>
 
